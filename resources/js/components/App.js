@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import ProjectsList from './ProjectsList'
 import NewProject from './NewProject'
+import SingleProject from './SingleProject'
 
 class App extends Component {
   render () {
@@ -16,6 +17,7 @@ class App extends Component {
 		  <Switch>
 			<Route exact path='/' component={ProjectsList} />
 			<Route path='/create' component={NewProject} />
+			<Route path='/:id' component={SingleProject} />
 		  </Switch>
 		</div>
 	  </BrowserRouter>
